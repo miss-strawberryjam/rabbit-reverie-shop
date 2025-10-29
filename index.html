@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rabbit Reverie — Nostalgic Handmade Accessories & Cute Goods</title>
+  <meta name="description" content="Cottagecore, kawaii, handmade accessories and character goods by Rabbit Reverie." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Quicksand:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Favicon (replace /assets/favicon.png with your own) -->
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+
+  <style>
+    :root{
+      --bg: #fffaf7;           /* soft cream */
+      --ink: #3c2f2f;          /* cocoa brown */
+      --accent: #b17786;       /* dusty rose */
+      --accent-2: #e8c7d2;     /* pale rose */
+      --card: #ffffff;         /* pure white */
+      --gingham: rgba(177,119,134,0.12); /* for bg pattern */
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; background:var(--bg); color:var(--ink);
+      font-family: Quicksand, system-ui, -apple-system, Segoe UI, Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji";
+      line-height:1.6;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{opacity:.9}
+
+    /* Subtle gingham-like background */
+    body::before{
+      content:""; position:fixed; inset:0; z-index:-1;
+      background:
+        linear-gradient(90deg, var(--gingham) 1px, transparent 1px) 0 0/24px 24px,
+        linear-gradient(var(--gingham) 1px, transparent 1px) 0 0/24px 24px;
+    }
+
+    /* Layout */
+    .container{max-width:1100px; margin:0 auto; padding:0 20px}
+    header{
+      position:sticky; top:0; z-index:10; backdrop-filter: blur(6px);
+      background: color-mix(in srgb, var(--bg) 80%, white 20%);
+      border-bottom:1px solid #eadede;
+    }
+    .nav{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
+    .brand{display:flex; align-items:center; gap:10px}
+    .brand__logo{width:36px; height:214px; border-radius:50%; background:var(--accent-2); display:inline-grid; place-items:center; box-shadow:0 2px 6px rgba(0,0,0,.06)}
+    .brand__name{font-family: "Playfair Display", serif; font-weight:700; letter-spacing:.5px}
+
+    .nav__links{display:flex; gap:16px; font-weight:600}
+    .btn{display:inline-block; padding:10px 14px; border-radius:999px; background:var(--accent); color:white; font-weight:700; box-shadow:0 6px 14px rgba(177,119,134,.22)}
+    .btn--ghost{background:transparent; color:var(--accent); border:2px solid var(--accent)}
+
+    /* Hero */
+    .hero{padding:56px 0 32px}
+    .hero__card{
+      display:grid; grid-template-columns: 1.1fr 1fr; gap:28px; align-items:center;
+      background:var(--card); border-radius:24px; padding:28px; box-shadow:0 10px 30px rgba(0,0,0,.06);
+      border:1px solid #f0e7ea;
+    }
+    .hero h1{font-family:"Playfair Display", serif; font-size:clamp(28px, 4vw, 44px); margin:0 0 8px}
+    .hero p{margin:0 0 16px}
+    .hero__img{
+      width:100%; aspect-ratio:4/3; object-fit:cover; border-radius:20px; border:1px solid #f0e7ea;
+      box-shadow:0 8px 22px rgba(177,119,134,.18)
+    }
+
+    /* Section headings */
+    .section{padding:28px 0}
+    .section h2{font-family:"Playfair Display", serif; font-size:clamp(22px,3vw,32px); margin:0 0 8px}
+    .section p.lead{margin:0 0 18px; color:#6b5b5b}
+
+    /* Gallery grid */
+    .grid{display:grid; grid-template-columns: repeat(2,1fr); gap:16px}
+    @media (min-width:800px){.grid{grid-template-columns: repeat(4,1fr)}}
+    .card{
+      background:var(--card); border-radius:18px; overflow:hidden; border:1px solid #f0e7ea;
+      transition: transform .15s ease, box-shadow .15s ease;
+    }
+    .card:hover{transform:translateY(-2px); box-shadow:0 12px 24px rgba(0,0,0,.08)}
+    .card img{width:100%; height:180px; object-fit:cover; display:block}
+    .card__body{padding:12px 12px 16px}
+    .card__title{font-weight:700}
+    .price{font-weight:800; color:var(--accent)}
+
+    /* About */
+    .about{display:grid; gap:18px}
+    @media (min-width:900px){.about{grid-template-columns: 1fr 1fr}}
+    .about__photo{width:100%; aspect-ratio:1/1; object-fit:cover; border-radius:18px; border:1px solid #f0e7ea}
+
+    /* Footer */
+    footer{margin-top:32px; padding:32px 0; border-top:1px solid #eadede; color:#6b5b5b}
+
+    /* Utility */
+    .muted{color:#7a6a6a}
+    .pill{display:inline-block; padding:6px 10px; border-radius:999px; background:var(--accent-2); font-weight:700}
+    .row{display:flex; gap:12px; flex-wrap:wrap; align-items:center}
+    .sr-only{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand__logo" aria-hidden="true">
+          <img src="assets/IMG_3274.jpg">
+
+        </div>
+      </div>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#gallery">Gallery</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a class="btn" href="#shop" id="shopBtn">Shop</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero__card">
+        <div>
+          <span class="pill">Handmade • Cottagecore • Kawaii</span>
+          <h1>Sweet, nostalgic accessories — stitched with love.</h1>
+          <p>Headdresses, ribbon rose combs, felt magnets, and stickers inspired by cozy afternoons and tea garden daydreams.</p>
+          <div class="row">
+            <a class="btn" href="#gallery">Browse Gallery</a>
+            <a class="btn btn--ghost" href="#about">About the Maker</a>
+          </div>
+        </div>
+        <!-- Replace src with your best hero image -->
+        <img class="hero__img" src="assets/gallery/E21D44E2-C0A9-48F6-B7B6-17EE3F1B8847_1_105_c.jpeg" alt="Lace headdress and ribbon roses on a soft gingham background" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <h2>Gallery</h2>
+      <p class="lead">A peek at recent makes. Purchase links coming soon~</p>
+      <div class="grid">
+        <!-- CARD TEMPLATE — duplicate and replace image/alt/label/price/link -->
+        <a class="card" href="#shop" aria-label="Cocoa Lace Headdress">
+          <img src="assets/gallery/IMG_1136.jpeg" alt="Cream lace headdress with ribbon roses" loading="lazy" />
+          <div class="card__body">
+            <div class="card__title">Cocoa Lace Headdress</div>
+            <div class="muted">Handmade • Limited</div>
+          </div>
+        </a>
+        <a class="card" href="#shop" aria-label="Rabbit Tapestry Blue Headdress">
+          <img src="assets/gallery/IMG_1081 2.jpeg" alt="Ribbon rose hair comb in dusty pink" loading="lazy" />
+          <div class="card__body">
+            <div class="card__title">Rabbit Tapestry Blue Headdress</div>
+            <div class="muted">Soft blue • Satin</div>
+          </div>
+        </a>
+        <a class="card" href="#shop" aria-label="Felt Pudding Magnet">
+          <img src="assets/gallery/2F1BCC7B-27BA-4FE1-BDC0-63A72918C274_1_105_c.jpeg" alt="Cute felt pudding magnet with tiny smile" loading="lazy" />
+          <div class="card__body">
+            <div class="card__title">Pudding Magnet</div>
+            <div class="muted">Hand-stitched felt</div>
+          </div>
+        </a>
+        <a class="card" href="#shop" aria-label="Bunny Magnet">
+          <img src="assets/gallery/E21D44E2-C0A9-48F6-B7B6-17EE3F1B8847_1_105_c.jpeg" alt="Kawaii bunny magments" loading="lazy" />
+          <div class="card__body">
+            <div class="card__title">Bunny Magnet</div>
+            <div class="muted">Hand-stitched felt • Cute buns</div>
+          </div>
+        </a>
+
+        <a class="card" href="#shop" aria-label="Bunny Sticker">
+          <img src="assets/gallery/scan_20251004_000433.png" alt="Kawaii bunny stickers" loading="lazy" />
+          <div class="card__body">
+            <div class="card__title">Bunny Sticker</div>
+            <div class="muted">• Cute buns</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <h2>About</h2>
+      <div class="about">
+        <div>
+          <p class="lead">Rabbit Reverie is a small handmade brand by Michelle, blending cottagecore textures, lace, and cute character design into sweet, wearable treasures.</p>
+          <p>Each piece is crafted with care in California — from tapestry ribbon headdresses and ribbon-rose combs to felt magnets and vinyl stickers. Made to spark comfort, softness, and a little bit of daydream.</p>
+          <p>Follow along for shop updates and market dates.</p>
+          <div class="row">
+            <a class="btn" id="igLink" href="https://instagram.com/rabbitreverie.shop" target="_blank" rel="noopener">Instagram</a>
+            <a class="btn btn--ghost" id="mailLink" href="mailto:hello@rabbitreverie.shop">Email</a>
+          </div>
+        </div>
+        <!-- Replace with a maker or flat-lay photo -->
+        <img class="about__photo" src="assets/IMG_3274-2.jpg" alt="Lace, ribbons, and finished accessories on a pastel background" loading="lazy" />
+      </div>
+    </section>
+
+    <!-- CONTACT / LINKS -->
+    <section class="section" id="contact">
+      <h2>Contact & Links</h2>
+      <p class="lead">Questions or custom requests? Say hello ♥</p>
+      <ul>
+        <li>Email: <a href="mailto:hello@rabbitreverie.shop">hello@rabbitreverie.shop</a></li>
+        <li>Instagram: <a href="https://instagram.com/rabbitreverie.shop" target="_blank" rel="noopener">@rabbitreverie.shop</a></li>
+        <li id="shop">Shop: <a href="#" id="shopLink">Coming soon~</a></li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> Rabbit Reverie — Handmade with love.</small>
+    </div>
+  </footer>
+
+  <script>
+    // Replace these with your live links when ready
+    const SHOP_URL = "#"; // e.g., https://etsy.com/shop/rabbitreverie
+    const IG_URL = "https://instagram.com/rabbitreverie.shop"; // update if different
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+    document.getElementById('shopLink').setAttribute('href', SHOP_URL);
+    document.getElementById('shopBtn').setAttribute('href', SHOP_URL);
+    document.getElementById('igLink').setAttribute('href', IG_URL);
+  </script>
+
+  <!--
+    🚀 HOW TO USE
+    1) Put this file as index.html in your GitHub repo.
+    2) Create folders: /assets, /assets/gallery. Add your images there.
+    3) Replace image src paths and text content with your own.
+    4) When you have Etsy/Ko-fi, set SHOP_URL above.
+    5) Optional: add a CNAME file (with "rabbitreverie.shop") if using a custom domain.
+    6) Optional: create an empty file named .nojekyll in the repo root.
+  -->
+</body>
+</html>
