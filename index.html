@@ -120,6 +120,16 @@
 
     /* Header lace border strip */
     #header{width:100%; height:22px; background:url(assets/rr-border-horizontal-bottom.png); background-size:auto 22px}
+
+
+    /* Cat Day hero image: show the whole photo (no cropping) */
+  .catday-hero img{
+  height: auto;
+  max-height: 560px;     /* adjust as you like */
+  object-fit: contain;
+  background: #fffaf7;   /* matches your site bg */
+}
+
   </style>
 </head>
 <body>
@@ -135,6 +145,7 @@
       <!-- Desktop links -->
       <nav class="nav__links" aria-label="Main">
         <a href="#gallery">Gallery</a>
+        <a href="#cat-day">Cat Day</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
         <a class="btn" href="#shop" id="shopBtn">Shop</a>
@@ -155,6 +166,7 @@
       <button class="drawer__scrim" id="menuScrim" aria-label="Close menu"></button>
       <nav class="drawer__panel" aria-label="Mobile">
         <a href="#gallery" data-close>Gallery</a>
+        <a href="#cat-day" data-close>Cat Day</a>
         <a href="#about" data-close>About</a>
         <a href="#contact" data-close>Contact</a>
         <a class="btn" href="#shop" id="shopBtnMobile" data-close>Shop</a>
@@ -239,6 +251,90 @@
       </div>
     </section>
 
+
+ <!-- HAIR BOWS -->
+<section class="section" id="bows">
+  <h2>Hand made hair bows</h2>
+  <p class="lead">A special mini collection — all made my hand. The atelier pieces include flowers made by hand as well.</p>
+
+  <a class="card catday-hero" href="assets/gallery/AEEA6538-1AF2-4781-BFAE-9F16B3593A4A_1_201_a.jpg" aria-label="Cat Day collection photo">
+    <img src="assets/gallery/AEEA6538-1AF2-4781-BFAE-9F16B3593A4A_1_201_a.jpg" alt=" Hair bow Rabbit Reverie collection" loading="lazy" />
+    <div class="card__body">
+      <div class="card__title">Hair bows</div>
+      <div class="muted">Limited • Handmade • While supplies last</div>
+    </div>
+  </a>
+
+
+    <!-- CAT DAY -->
+<section class="section" id="cat-day">
+  <h2>Cat Day Products</h2>
+  <p class="lead">A special mini collection — 7 items shown in one photo. Tap the image to zoom, then use the list below to shop each piece.</p>
+
+  <a class="card catday-hero" href="assets/gallery/IMG_3303.jpeg" aria-label="Cat Day collection photo">
+    <img src="assets/gallery/IMG_3303.jpeg" alt="Cat Day collection: seven handmade Rabbit Reverie items in one photo" loading="lazy" />
+    <div class="card__body">
+      <div class="card__title">Cat Day Mini Collection (7 items)</div>
+      <div class="muted">Limited • Handmade • While supplies last</div>
+    </div>
+  </a>
+
+
+  <div style="height:14px"></div>
+
+  <div class="grid">
+    <a class="card" href="#" aria-label="Cat Day item 1">
+      <div class="card__body">
+        <div class="card__title">1) Macaron cat</div>
+        <div class="muted">A cute hair accessory, a magnet, or bag charm</div>
+      </div>
+    </a>
+
+    <a class="card" href="#" aria-label="Cat Day item 2">
+      <div class="card__body">
+        <div class="card__title">2) Toast cat</div>
+        <div class="muted">A cute hair accessory, a magnet, or bag charm—</div>
+      </div>
+    </a>
+
+    <a class="card" href="#" aria-label="Cat Day item 3">
+      <div class="card__body">
+        <div class="card__title">3) Cat treat!</div>
+        <div class="muted">A cute hair accessory, a magnet, or bag charm</div>
+      </div>
+    </a>
+
+    <a class="card" href="#" aria-label="Cat Day item 4">
+      <div class="card__body">
+        <div class="card__title">4) Elegant cat sticker</div>
+        <div class="muted"></div>
+      </div>
+    </a>
+
+    <a class="card" href="#" aria-label="Cat Day item 5">
+      <div class="card__body">
+        <div class="card__title">5) Silly cat sticker</div>
+        <div class="muted"></div>
+      </div>
+    </a>
+
+    <a class="card" href="#" aria-label="Cat Day item 6">
+      <div class="card__body">
+        <div class="card__title">6)  Silly cat sticker</div>
+        <div class="muted"></div>
+      </div>
+    </a>
+
+    <a class="card" href="#" aria-label="Cat Day item 7">
+      <div class="card__body">
+        <div class="card__title">7)  Silly cat sticker</div>
+        <div class="muted"></div>
+      </div>
+    </a>
+  </div>
+</section>
+
+
     <!-- ABOUT -->
     <section class="section" id="about">
       <h2>About</h2>
@@ -252,7 +348,7 @@
             <a class="btn btn--ghost" id="mailLink" href="mailto:hello@rabbitreverie.shop">Email</a>
           </div>
         </div>
-        <img class="about__photo" src="assets/IMG_3274-2.jpg" alt="Lace, ribbons, and finished accessories on a pastel background" loading="lazy" />
+        <img class="about__photo" src="assets/Circular version.PNG" alt="Lace, ribbons, and finished accessories on a pastel background" loading="lazy" />
       </div>
     </section>
 
